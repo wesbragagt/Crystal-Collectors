@@ -58,6 +58,9 @@ img {
     
 }
 
+a:active {
+    background: orange;
+}
 
 .total {
     width: 20%;

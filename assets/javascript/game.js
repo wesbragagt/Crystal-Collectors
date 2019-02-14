@@ -2,56 +2,58 @@
 
 $(document).ready(function () {
 
-    // Function Generate Random Number 
-    var generateNumber = function (alpha) {
-        return Math.floor(Math.random() * alpha) + 1;
+    var score = 0;
+    var win = 0;
+    var losses = 0;
+
+    // Function Generate Random Number where alpha is the multiplication factor
+    function generateNumber(alpha) {
+        return Math.floor(Math.random() * alpha) + 2;
     }
     // assign to number and display it
     var number = generateNumber(100);
     console.log('computer picked ' + number);
     $('#random-number').text(number);
 
-    // Create an array for the crystal values
+    // Create an array for the crystal values and a for loop that iterates through 4 random values and assigns them to crystalArray
     var crystalArray = [];
     for (var i = 0; i < 4; i++) {
-        crystalArray.push(generateNumber(17))
+        crystalArray.push(generateNumber(10))
     }
-    console.log(crystalArray);
+    console.log('values are ' + crystalArray);
     // Each Crystal gets assigned a value
-    var red = crystalArray[0]
-    var blue = crystalArray[1]
-    var purple = crystalArray[2]
-    var green = crystalArray[3]
+    // create a variable gets the actual value
 
-    console.log('red crystal value is ' + red);
-    console.log('blue crystal value is ' + blue);
-    console.log('purple crystal value is ' + purple);
-    console.log('green crystal value is ' + green);
+    var redNumber = crystalArray[0];
+    $('#img1').val(redNumber);
 
+    var blueNumber = crystalArray[1];
+    $('#img2').val(blueNumber);
 
+    var purpleNumber = crystalArray[2];
+    $('#img3').val(purpleNumber);
 
+    var greenNumber = crystalArray[3];
+    $('#img4').val(greenNumber);
 
-
-
-
-
-
-
-
-
+    //console test
+    console.log('red is ' + redNumber);
+    console.log('blue is ' + blueNumber);
+    console.log('purple is ' + purpleNumber);
+    console.log('green is ' + greenNumber);
 
 
 
+    // Function on click
+    $('.crystal').on('click', function () {
+        score += parseInt($(this).val());
 
+        // Display result score
 
-
-
+        $('#score').text(score);
+    });
 
 });
-
-
-
-
 
 
 // results panel displays total score
