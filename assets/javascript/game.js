@@ -12,17 +12,16 @@ $(document).ready(function () {
     var purpleNumber;
     var greenNumber;
 
-    var crystalArray = [];
 
     $('#win').text(win);
     $('#losses').text(losses);
 
-
     // function reset to reset the score and pick another number
 
     function reset() {
-        number = 0;
         score = 0;
+        number = generateNumber(120);
+        var crystalArray = [];
 
         $('#img1, #img2, #img3, #img4').empty();
         console.clear();
@@ -32,7 +31,7 @@ $(document).ready(function () {
         $('#win').text(win);
         $('#losses').text(losses);
 
-        number = generateNumber(120);
+
         console.log('computer picked ' + number);
         $('#random-number').text(number);
 
@@ -45,7 +44,7 @@ $(document).ready(function () {
         // crystalArray = [];
         for (var i = 0; i < 4; i++) {
 
-            crystalArray.unshift(generateNumber(12))
+            crystalArray.push(generateNumber(12))
         }
         console.log('values are ' + crystalArray);
         // Each Crystal gets assigned a value
