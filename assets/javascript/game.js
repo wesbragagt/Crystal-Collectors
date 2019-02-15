@@ -2,11 +2,17 @@
 
 $(document).ready(function () {
     var number = 0;
-    var score = 0
+    var score = 0;
+
     var win = 0;
     var losses = 0;
 
-    var crystalArray;
+    var redNumber;
+    var blueNumber;
+    var purpleNumber;
+    var greenNumber;
+
+    var crystalArray = [];
 
     $('#win').text(win);
     $('#losses').text(losses);
@@ -15,8 +21,13 @@ $(document).ready(function () {
     // function reset to reset the score and pick another number
 
     function reset() {
-        console.clear();
+        number = 0;
         score = 0;
+
+        $('#img1, #img2, #img3, #img4').empty();
+        console.clear();
+
+        console.log('set score to ' + score);
         $('#score').text(score);
         $('#win').text(win);
         $('#losses').text(losses);
@@ -31,24 +42,25 @@ $(document).ready(function () {
         }
 
         // Create an array for the crystal values and a for loop that iterates through 4 random values and assigns them to crystalArray
-        crystalArray = [];
+        // crystalArray = [];
         for (var i = 0; i < 4; i++) {
-            crystalArray.push(generateNumber(12))
+
+            crystalArray.unshift(generateNumber(12))
         }
         console.log('values are ' + crystalArray);
         // Each Crystal gets assigned a value
         // create a variable gets the actual value
 
-        var redNumber = crystalArray[0];
+        redNumber = crystalArray[0];
         $('#img1').val(redNumber);
 
-        var blueNumber = crystalArray[1];
+        blueNumber = crystalArray[1];
         $('#img2').val(blueNumber);
 
-        var purpleNumber = crystalArray[2];
+        purpleNumber = crystalArray[2];
         $('#img3').val(purpleNumber);
 
-        var greenNumber = crystalArray[3];
+        greenNumber = crystalArray[3];
         $('#img4').val(greenNumber);
 
         //console test
@@ -63,24 +75,31 @@ $(document).ready(function () {
 
 
         // Function on click
+
         $('.crystal').on('click', function () {
 
             score += parseInt($(this).val());
             $('#score').text(score);
 
 
-            // condition for if score equals number
-            if (number == score) {
-                alert('you win');
+
+
+            if (score === number) {
+                win++;
                 reset();
             }
             else if (score > number) {
-                alert('you lose');
+                losses++;
                 reset();
             }
-            else { return; }
+            else { return }
 
         });
+
+
+
+
+
 
     }
     reset();
