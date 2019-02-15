@@ -1,7 +1,7 @@
 // A $( document ).ready() block.
 
 $(document).ready(function () {
-    var number;
+    var number = 0;
     var score = 0
     var win = 0;
     var losses = 0;
@@ -15,6 +15,7 @@ $(document).ready(function () {
     // function reset to reset the score and pick another number
 
     function reset() {
+        console.clear();
         score = 0;
         $('#score').text(score);
         $('#win').text(win);
