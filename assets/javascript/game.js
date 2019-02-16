@@ -2,6 +2,7 @@
 var number = 0;
 var score = 0;
 var win = 0;
+var message = '';
 var losses = 0;
 var redNumber;
 var blueNumber;
@@ -23,10 +24,12 @@ $('.crystal').on('click', function () {
     score += parseInt($(this).val());
     $('#score').text(score);
     if (score === number) {
+        message = 'such a smart ass!'
         win++;
         reset();
     }
     else if (score > number) {
+        message = 'you can do better.'
         losses++;
         reset();
     }
@@ -39,6 +42,7 @@ function reset() {
     score = 0;
     number = generateNumberBetween(120);
     var crystalArray = [];
+    $('#message').text(message);
     $('#win').text(win);
     $('#losses').text(losses);
 
