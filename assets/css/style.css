@@ -93,7 +93,7 @@ a:active {
 }
 
 audio {
-    visibility: visible;
+    visibility: hidden;
 }
 
 /* Utility classes */
