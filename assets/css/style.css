@@ -91,6 +91,10 @@ a:active {
     font-size: 1.5rem;
 }
 
+audio {
+    visibility: visible;
+}
+
 /* Utility classes */
 
 .margin {
