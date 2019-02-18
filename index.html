@@ -18,13 +18,13 @@
 </head>
 
 <body>
-    <audio preload="auto" autoplay loop controls src="assets/sound/aladdin-sound.mp3"></audio>
+    <audio id="audio" loop="loop" controls src="assets/sound/aladdin-sound.mp3"></audio>
     <div class="container">
         <header class="head margin border">
             <h1>Crystal Collector</h1>
         </header>
 
-        <section class="instructions margin border">
+        <section class="instructions border">
             <p> Player! <br> You will be given a random number at the start of the game. <br>
                 There are four crystals below. By clicking on a crystal you will add a specific amount of points to your
                 total score. <br>
@@ -38,21 +38,21 @@
         </section>
 
         <div id="img-master" class="images">
-            <a href="#img1"><img id="img1" class="crystal margin border" src="assets/images/red-crystal.jpeg"
-                    alt="red-crystal" value=""></a>
-            <a href="#img2"><img id="img2" class="crystal margin border" src="assets/images/blue-crystal.jpeg"
+            <a href="#img1"><img id="img1" class="crystal border" src="assets/images/red-crystal.jpeg" alt="red-crystal"
+                    value=""></a>
+            <a href="#img2"><img id="img2" class="crystal border" src="assets/images/blue-crystal.jpeg"
                     alt="blue-crystal" value=""></a>
-            <a href="#img3"><img id="img3" class="crystal margin border" src="assets/images/purple-crystal.jpg"
+            <a href="#img3"><img id="img3" class="crystal border" src="assets/images/purple-crystal.jpg"
                     alt="purple-crystal" value=""></a>
-            <a href="#img4"><img id="img4" class="crystal margin border" src="assets/images/green-crystal.png"
+            <a href="#img4"><img id="img4" class="crystal border" src="assets/images/green-crystal.png"
                     alt="green-crystal" value=""></a>
         </div>
 
         <aside>
-            <div class="number inline-block margin border">
+            <div class="number inline-block border">
                 <div id="random-number">39</div>
             </div>
-            <div class="overall inline-block margin border">
+            <div class="overall inline-block border">
 
                 <div>
                     Win: <span id="win">0</span>

@@ -1,4 +1,4 @@
-// A $( document ).ready() block.
+// GLOBAL SCOPE VARIABLES
 var number = 0;
 var score = 0;
 var win = 0;
@@ -100,3 +100,5 @@ function generateNumberCrystals(alpha) {
 function generateNumberBetween(beta) {
     return Math.floor(Math.random() * beta) + 19;
 }
+
+
