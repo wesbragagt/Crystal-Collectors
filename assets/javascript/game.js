@@ -29,7 +29,7 @@ $('.crystal').on('click', function () {
         reset();
     }
     else if (score > number) {
-        message = 'you can do better.'
+        message = 'Come on, you can do better.'
         losses++;
         reset();
     }

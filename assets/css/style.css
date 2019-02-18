@@ -1,14 +1,17 @@
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    background: seagreen;
+    font-family: 'Aladin', cursive;
+    background: #2E8B57;
+    max-width: 1920px;
 }
 
 .container {
+    margin: 0 auto;
+    padding: 1em;
     display: flex;
     flex-direction: column;
     align-items: center;
     flex-wrap: wrap;
-    width: 1280px;
+    width: auto;
     height: auto;
     
 }
@@ -16,15 +19,21 @@ body {
 h1 {
     text-align: center;
     padding: 1em;
-    background: orange;
+    background: #CC8A14;
+    text-transform: capitalize;
+    font-size: 2em;
 }
 
 section {
-    width: 50%;
-    padding: 2em 1em 2em 1em;
-    background: orange;
-    color: green;
+    width: 35%;
+    padding: 2em 2em 2em 2em;
+    background: #CC8A14;
+    color: #000000;
     line-height: 1.5em;
+    text-align: center;
+    font-size: 1.5rem;
+    /* text-shadow: 1px 3px 2px rgba(0,0,0,0.3); */
+
 }
 
 aside {
@@ -34,24 +43,27 @@ aside {
 
 .number {
     padding: .5em 5em 5em .5em;
-    background: lightcoral;
+    background: #764198;
+    font-size: 1.5em;
 }
 
 .overall {
     display: flex;
     flex-direction: column;
     padding: .5em 5em 5em .5em;
-    background: red;
+    background: #D7A03D;
+    font-size: 1.5em;
     
 }
 .message {
-    font-size: 1rem;
+    font-size: 2rem;
 }
 
 
 .images {
     display: flex;
     flex-direction: row;
+    flex-wrap: nowrap;
 }
 
 img {
@@ -61,19 +73,22 @@ img {
 }
 
 a:active {
-    background: orange;
+    background: #D7A03D;
+    box-shadow: 0 0 0px #000;
 }
 
 .total {
     width: 20%;
     background: greenyellow;
     padding: .3em 4em 1em .3em;
+    font-size: 1.5rem;
 }
 
 .score {
     width: 20%;
     background: greenyellow;
     padding: .3em 4em 5em .3em;
+    font-size: 1.5rem;
 }
 
 /* Utility classes */
@@ -85,6 +100,9 @@ a:active {
 .border {
     border: 1px solid black;
     margin: 1em;
+    box-shadow: 0 0 2px #000;
+    border-radius: 3px;
+
 }
 
 .inline-block {
