@@ -20,7 +20,7 @@ $(document).ready(function () {
 
 $('.crystal').on('click', function () {
 
-    console.log($(this).val());
+    // console.log($(this).val());
     score += parseInt($(this).val());
     $('#score').text(score);
     if (score === number) {
@@ -47,15 +47,15 @@ function reset() {
     $('#losses').text(losses);
 
     $('#img1, #img2, #img3, #img4').empty();
-    console.clear();
+    // console.clear();
 
-    console.log('set score to ' + score);
+    // console.log('set score to ' + score);
     $('#score').text(score);
     $('#win').text(win);
     $('#losses').text(losses);
 
 
-    console.log('computer picked ' + number);
+    // console.log('computer picked ' + number);
     $('#random-number').text(number);
 
 
@@ -71,21 +71,21 @@ function reset() {
 
     redNumber = crystalArray[0];
     $('#img1').val(redNumber);
-    console.log('RED: ', redNumber)
+    // console.log('RED: ', redNumber)
 
     blueNumber = crystalArray[1];
     $('#img2').val(blueNumber);
-    console.log('BLUE', blueNumber);
+    // console.log('BLUE', blueNumber);
 
 
     purpleNumber = crystalArray[2];
     $('#img3').val(purpleNumber);
-    console.log('PURPLE', purpleNumber);
+    // console.log('PURPLE', purpleNumber);
 
 
     greenNumber = crystalArray[3];
     $('#img4').val(greenNumber);
-    console.log('GREEN', greenNumber);
+    // console.log('GREEN', greenNumber);
 
 
 

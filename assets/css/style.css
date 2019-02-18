@@ -52,6 +52,7 @@ aside {
     flex-direction: column;
     padding: .5em 5em 5em .5em;
     background: #D7A03D;
+    width: 10rem;
     font-size: 1.5em;
     
 }
